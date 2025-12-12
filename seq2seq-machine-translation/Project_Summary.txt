@@ -1,0 +1,19 @@
+Project 13: Seq2Seq Machine Translation
+
+Overview:
+This project implements a Sequence-to-Sequence (Seq2Seq) model using the Encoder-Decoder architecture, designed for machine translation tasks.
+
+Key Components:
+-   **Notebook**: `seq2seq-machine-translation.ipynb`
+-   **Architecture**: 
+    -   **Encoder**: Processes the input sequence (source language) and compresses it into a context vector.
+    -   **Decoder**: Generating the output sequence (target language) from the context vector.
+    -   Likely uses **LSTM** (Long Short-Term Memory) or **GRU** (Gated Recurrent Unit) layers for handling sequential data.
+-   **Training**:
+    -   Trained using TensorFlow/Keras.
+    -   Metrics include Accuracy.
+    -   Inference model setups for generating translations.
+
+Dependencies:
+-   TensorFlow / Keras
+-   NumPy

@@ -1,0 +1,29 @@
+Project Name: Organize_files_OCR
+
+Description:
+This project is an "Ultimate Photo Organizer" that uses Artificial Intelligence to automatically categorize images into distinct classes (e.g., bikes, cars, cats, documents, dogs, flowers, horses, humans). It leverages a pre-trained MobileNetV2 model for classification and integrates OCR (Optical Character Recognition) to extract text from images identified as documents. A Tkinter-based GUI makes it easy for users to select folders and organize their photo collections.
+
+Methodology (What happened):
+1.  **Data Preparation**: The dataset (approx. 2500 images) was split into training and validation sets using `image_dataset_from_directory`.
+2.  **Model Training**: Utilized Transfer Learning with MobileNetV2. The base model weights were frozen, and a custom classification head (Global Average Pooling, Dropout, Dense) was added and trained for 10 epochs.
+3.  **Classification**: The trained model predicts the category of input images.
+4.  **OCR Integration**: For images classified as "document", Tesseract OCR (or EasyOCR) text extraction is performed.
+5.  **Organization Logic**: A script (`organizer.py`) moves images into subfolders based on their predicted class.
+6.  **User Interface**: Developed a GUI (`org_ui.py`) using Tkinter to provide a user-friendly way to interact with the system.
+
+Benefits:
+-   **Efficiency**: Automates the tedious task of manually sorting thousands of photos.
+-   **Smart Document Handling**: Goes beyond simple sorting by making document text accessible.
+-   **High Accuracy**: Achieves high classification performance through transfer learning.
+-   **User-Friendly**: Accessible to non-technical users via a graphical interface.
+
+Accuracy:
+-   **Validation Accuracy**: 98.20% (achieved at Epoch 10).
+-   **Validation Loss**: 0.0445.
+-   The model demonstrates excellent generalization on the validation set, reliably distinguishing between the 8 categories.
+
+Learnings:
+-   Implementing Transfer Learning with TensorFlow/Keras and MobileNetV2.
+-   Building desktop GUI applications with Tkinter.
+-   Integrating OCR libraries (Tesseract/EasyOCR) into a computer vision pipeline.
+-   Handling file system operations for automated organization.

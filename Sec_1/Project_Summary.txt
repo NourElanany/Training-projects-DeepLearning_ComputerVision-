@@ -1,0 +1,35 @@
+Project 12: Sec_1 (Neural Networks & Segmentation)
+
+Overview:
+This project demonstrates the implementation of various neural network architectures for classification, regression, and segmentation tasks. It serves as a practical guide to using TensorFlow/Keras for different types of machine learning problems.
+
+Key Components:
+1.  **Multi-Class Classification (`Multi Classification.ipynb`)**:
+    -   **Task**: Image classification on the MNIST dataset (digits 0-9).
+    -   **Model**: A Sequential Convolutional Neural Network (CNN) with Flatten and Dense layers.
+    -   **Configuration**: 
+        -   Optimizer: SGD
+        -   Loss: Sparse Categorical Crossentropy
+        -   Metrics: Accuracy
+    -   **Results**: High accuracy achieved over 20 epochs.
+
+2.  **Regression (`Regression.ipynb`)**:
+    -   **Task**: Predicting housing prices using the California Housing dataset.
+    -   **Model**: A Multi-layer Perceptron (MLP) with dense layers and ReLU activation.
+    -   **Configuration**:
+        -   Optimizer: SGD
+        -   Loss: Mean Squared Error (MSE)
+        -   Metrics: Mean Absolute Error (MAE)
+    -   **Preprocessing**: StandardScaler used for feature scaling.
+
+3.  **Binary Segmentation (`binary-segmentation.ipynb`)**:
+    -   **Task**: Segmentation of Brain MRI images (LGG MRI Segmentation Dataset) to identify tumors.
+    -   **Approach**: Likely uses a U-Net or similar architecture (inferred from context).
+    -   **Metrics**: Dice Coefficient and Intersection over Union (IoU) are used for evaluation.
+    -   **Visualization**: Qualitative analysis comparing True Masks vs. Predicted Masks.
+
+Dependencies:
+-   TensorFlow / Keras
+-   NumPy, Pandas
+-   Matplotlib, Seaborn
+-   Scikit-learn
