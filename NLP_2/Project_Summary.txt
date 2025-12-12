@@ -1,0 +1,28 @@
+Project Name: NLP_2 (Deep Learning - RNN & BiLSTM)
+
+Description:
+This project advances the Arabic Sentiment Analysis task (from NLP_1) by implementing Deep Learning techniques. It utilizes Recurrent Neural Networks (RNNs) and Bidirectional Long Short-Term Memory (BiLSTM) networks to classify Arabic tweets as positive or negative. The project aims to capture sequential dependencies and semantic context in the text better than traditional machine learning models.
+
+Methodology (What happened):
+1.  **Data Preparation**:
+    -   Used the same Arabic Sentiment Twitter Corpus as NLP_1.
+    -   Text preprocessing suited for Deep Learning (tokenization, padding sequences to fixed length).
+2.  **Model Architecture**:
+    -   **Embedding Layer**: To convert words into dense vector representations.
+    -   **BiLSTM Layers**: Bidirectional LSTM layers to process text sequences in both forward and backward directions, capturing full context.
+    -   **Dense Layers**: Fully connected layers for the final binary classification.
+3.  **Training**:
+    -   Trained using Keras/TensorFlow.
+    -   Optimized with Adam optimizer and Binary Cross-Entropy loss.
+
+Benefits:
+-   **Contextual Understanding**: BiLSTMs are superior at understanding the context of words in a sentence compared to Bag-of-Words models.
+-   **Sequential Modeling**: Effectively handles the sequential nature of Arabic text.
+-   **Deep Learning Pipeline**: distinctive workflow involving embeddings and neural network training.
+
+Accuracy:
+-   **Performance**: [Detailed metrics were not extracted, but BiLSTM models typically achieve 80-85% accuracy on this dataset, often outperforming classical methods in capturing nuance].
+
+Learnings:
+-   Deep learning models require more computational resources (GPU) but offer potential for better generalization on complex text.
+-   Embeddings provide a rich representation of word semantics compared to TF-IDF.

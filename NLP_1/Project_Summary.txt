@@ -1,0 +1,39 @@
+Project Name: NLP_1 (Arabic Sentiment Analysis)
+
+Description:
+This project focuses on Arabic Sentiment Analysis using a dataset of tweets ('train_Arabic_tweets'). The goal is to classify tweets as either "positive" or "negative". It involves extensive data cleaning, text preprocessing, and a comprehensive comparison of over 10 different machine learning models using both CountVectorizer and TF-IDF vectorization techniques.
+
+Methodology (What happened):
+1.  **Data Loading and Cleaning**:
+    -   Loaded 4 datasets (train/test, positive/negative) containing Arabic tweets.
+    -   Combined them into a single dataset (~56k rows).
+    -   Cleaned text by removing URLs, handles, hashtags, numbers, punctuation, and Arabic diacritics (Tashkeel) using Regex.
+    -   Normalized repeated characters.
+2.  **Preprocessing**:
+    -   Encoded target labels (Positive/Negative) into binary format.
+    -   Split data into training (80%) and testing (20%) sets.
+    -   Feature Extraction: Applied both **CountVectorizer** and **TfidfVectorizer** (1-gram, max 20,000 features).
+3.  **Model Training & Comparison**:
+    -   Trained and evaluated 11 different models: Logistic Regression, MultinomialNB, BernoulliNB, LinearSVC, RandomForest, GradientBoosting, AdaBoost, ExtraTrees, KNeighbors, DecisionTree, and XGBoost.
+4.  **Evaluation**:
+    -   Compared models based on Accuracy and F1-Score for both vectorization methods.
+    -   Visualized results using bar charts.
+
+Benefits:
+-   **Benchmarking**: Provides a clear performance comparison of diverse ML algorithms for Arabic text.
+-   **Text Processing Pipeline**: Establishes a robust cleaning pipeline specific to Arabic social media text.
+-   **Feature Engineering**: Demonstrates the impact of different vectorization strategies (Count vs. TF-IDF).
+
+Accuracy:
+-   **Best Performing Model**: **ExtraTreesClassifier** with TF-IDF.
+    -   **Accuracy**: ~80.04%
+    -   **F1-Score**: ~79.23%
+-   **Runner-up**: **RandomForest** with TF-IDF.
+    -   **Accuracy**: ~79.74%
+    -   **F1-Score**: ~78.85%
+-   **Fastest Good Performer**: **LinearSVC** (Acc ~77.9%, Time ~22s) and **LogisticRegression** (Acc ~77.8%, Time ~4.7s).
+
+Learnings:
+-   Effective preprocessing (removing diacritics, normalization) is crucial for Arabic NLP.
+-   Ensemble methods like ExtraTrees and RandomForest generally outperformed simpler linear models, though at a higher computational cost.
+-   TF-IDF generally provided slight improvements over CountVectorizer for this dataset.
