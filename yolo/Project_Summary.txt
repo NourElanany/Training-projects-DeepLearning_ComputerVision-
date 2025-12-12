@@ -1,0 +1,27 @@
+Project Name: yolo
+
+Description:
+This project involves training a state-of-the-art object detection model, YOLOv12, on a custom dataset. It demonstrates the complete pipeline from environment setup and data acquisition to model training and performance monitoring.
+
+Methodology (What happened):
+1.  **Environment Setup**: Installed the `ultralytics` library and other dependencies (torch, roboflow) required for YOLO training.
+2.  **Data Acquisition**: Downloaded the 'Watch-1' dataset (likely containing annotated images of watches or similar objects) using the Roboflow API.
+3.  **Model Initialization**: Initialized the YOLOv12n (nano) model configuration, optimized for speed and efficiency.
+4.  **Training**: Trained the model for 50 epochs on the custom dataset, leveraging GPU acceleration.
+5.  **Monitoring**: Tracked training metrics such as Box Loss, Class Loss, and mAP (mean Average Precision) to ensure model convergence.
+
+Benefits:
+-   **State-of-the-Art Performance**: YOLOv12 represents the latest advancements in real-time object detection accuracy and speed.
+-   **Customization**: Shows how to adapt pre-trained models to specific custom domains (e.g., watch detection).
+-   **Automation**: The pipeline automates data handling and training, making it scalable for other detection tasks.
+
+Accuracy:
+- mAP50: 0.70 (70.0%)
+- mAP50-95: 0.368 (36.8%)
+- These metrics indicate a decent detection capability, with the model correctly identifying objects with 50% overlap 70% of the time.
+
+Learnings:
+-   Setting up a Deep Learning environment for Object Detection.
+-   Using the Ultralytics API for training YOLO models.
+-   Integrating with Roboflow for dataset management.
+-   Interpreting object detection metrics (IoU, mAP, Loss functions).

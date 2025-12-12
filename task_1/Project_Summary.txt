@@ -1,0 +1,27 @@
+Project Name: task_1
+
+Description:
+This project demonstrates fundamental image processing techniques using OpenCV. It focuses on morphological operations and binary thresholding to manipulate and analyze images, culminating in the concatenation of original and processed results for comparison.
+
+Methodology (What happened):
+1.  **Image Loading**: Read input images (`input1.jpg`, `input2.jpg`) using OpenCV.
+2.  **Morphological Operations**: Applied Dilation and Erosion using a 5x5 kernel to modify image features (e.g., removing noise, enhancing structures).
+3.  **Thresholding**: Performed binary thresholding and bitwise inversion to create binary masks of the images.
+4.  **Resizing**: Resized images to ensure they have matching dimensions (height) for concatenation.
+5.  **Concatenation**: Used `np.hstack` to horizontally concatenate the original and processed images into a single output.
+6.  **Output Generation**: Saved the final combined image as `concatenated_output2.jpg`.
+
+Benefits:
+-   **Foundational Knowledge**: key for understanding how computer vision algorithms preprocess data.
+-   **Noise Removal**: Morphological operations are essential for cleaning up binary masks in segmentation tasks.
+-   **Visualization**: Concatenation provides an immediate side-by-side comparison of processing steps.
+
+Accuracy:
+-   N/A (This is a deterministic image processing workflow, not a predictive model).
+-   The "accuracy" is defined by the visual correctness of the morphological transformations and the successful generation of the output image.
+
+Learnings:
+-   Mastering basic OpenCV functions (`cv2.imread`, `cv2.resize`, `cv2.threshold`).
+-   Understanding the geometric effects of Dilation (expanding bright regions) and Erosion (shrinking bright regions).
+-   Manipulating image arrays using NumPy (concatenation).
+-   Coordinate systems and image properties (height, width, channels).
