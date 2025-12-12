@@ -1,0 +1,27 @@
+Project Name: early-fusion
+
+Description:
+This project addresses the challenge of multi-modal disease detection, specifically targeting Pneumonia and Lung Cancer. It leverages an "early fusion" approach to combine information from different medical imaging modalities (Chest X-Ray and CT scans) or features at the input level to improve classification performance.
+
+Methodology (What happened):
+1.  **Data Acquisition**: Utilized the CXR-CT-Cough dataset containing samples for Pneumonia, Healthy, and Lung Cancer classes.
+2.  **Data Preprocessing**: Loaded and preprocessed images from different modalities to ensure compatibility for fusion.
+3.  **Early Fusion**: Combined raw data or extracted features from CXR and CT scans into a single representation vector before feeding it into the model.
+4.  **Model Training**: Trained a classification model (likely a CNN-based architecture) on the fused data to distinguish between the three health conditions.
+5.  **Evaluation**: Assessed the model's ability to correctly classify patients based on the combined multi-modal input.
+
+Benefits:
+-   **Holistic Diagnosis**: Uses complementary information from multiple modalities for a more comprehensive assessment.
+-   **Improved Accuracy**: Early fusion often yields better performance than single-modal approaches by leveraging correlations between modalities.
+-   **Robustness**: Potentially more robust to noise or missing information in a single modality.
+
+Accuracy:
+- Weighted Average F1-Score: 0.94
+- Overall Accuracy: 94%
+- The model achieves robust performance across the three classes (Pneumonia, Healthy, Lung Cancer), validating the effectiveness of the early fusion approach.
+
+Learnings:
+-   Techniques for multi-modal data fusion (early vs. late fusion).
+-   Preprocessing and aligning different types of medical images (X-Ray and CT).
+-   Building classification models for multi-class medical diagnosis.
+-   Handling imbalanced medical datasets.
