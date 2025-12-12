@@ -1,0 +1,27 @@
+Project Name: Face Detection & Recognition
+
+Description:
+This project implements a real-time face recognition system using a webcam. It combines robust face detection with deep learning-based facial embedding generation to identify individuals.
+
+Methodology (What happened):
+1.  **Face Detection**: Utilized the YOLOv8 model (`YoloV8 Face.pt`) to detect faces within the video frame with high speed and accuracy.
+2.  **Preprocessing**: Detected faces are cropped and resized to 112x112 pixels, normalized to the range [0, 1].
+3.  **Feature Extraction**: Employed the ArcFace model (with a ResNet34 backbone) to map face images into a 512-dimensional vector space.
+4.  **Recognition**: Calculated Cosine Similarity between the live face embedding and a pre-saved database of embeddings (`Face Recognition.csv`).
+5.  **Matching**: If the similarity score exceeds a threshold (default 0.3), the face is identified; otherwise, it is labeled as "Unknown".
+
+Benefits:
+-   **Security**: Can be used for secure access control systems.
+-   **Automation**: Useful for automated attendance tracking.
+-   **Efficiency**: YOLOv8 and ArcFace provide a good balance between speed and accuracy for real-time applications.
+
+Accuracy:
+-   The project uses a recognition threshold of 0.3.
+-   The ArcFace model typically achieves over 99% accuracy on standard benchmarks like LFW (Labeled Faces in the Wild).
+-   *Note: Specific accuracy on your custom dataset depends on the quality and quantity of the registration images.*
+
+Learnings:
+-   How to integrate object detection (YOLO) with recognition models.
+-   Understanding facial embeddings and vector space math (Cosine Similarity).
+-   Real-time video processing with OpenCV.
+-   The importance of preprocessing (alignment, resizing) for deep learning models.
